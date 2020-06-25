@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Candlepin</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Molle:ital@1&family=Overpass+Mono&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+    <a href="https://github.com/khamer/candlepin" class="ribbon"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" alt="Fork me on GitHub"></a>
+    <main>
+        <div class="alley"></div>
+
+        <div class="grid">
+            <h1 class="grid__cell -span-3">Candlepin</h1>
+            <p class="grid__cell -gutter -span-6">
+                Candlepin is a lightweight sass lib for lining up elements to a fluid grid. Similar to <a href="https://www.oddbird.net/susy/">Susy3</a>, you can just use the sass functions, or if you'd rather it has helper classes too.
+            </p>
+        </div>
+
+        <div class="grid -examples">
+            <div class="grid__cell -span-6"></div>
+            <div class="grid__cell -gutter -span-6"></div>
+
+            <div class="grid__cell -span-4"></div>
+            <div class="grid__cell -gutter -span-4"></div>
+            <div class="grid__cell -gutter -span-4"></div>
+
+            <div class="grid__cell -span-3"></div>
+            <div class="grid__cell -gutter -span-3"></div>
+            <div class="grid__cell -gutter -span-3"></div>
+            <div class="grid__cell -gutter -span-3"></div>
+        </div>
+
+        <h2 class="left-1">Settings</h2>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>$columns</code> (default: 12)
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Number of columns.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>$gutter</code> (default: 30px)
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Width of gutters.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="left-1">Functions</h2>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>span(&lt;columns&gt;)</code>
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Returns an appropriate value for a width that spans the number of columns specified. For example, <code>span(1)</code> spans one column, <code>span(2)</code> spans two column and the enclosed gutter, etc.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>left(&lt;columns&gt;)</code>
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Returns an appropriate value for a left margin to shift content over the number of columns and gutters specified. For example, <code>left(1)</code> shifts over one column and gutter, <code>left(2)</code> is for two columns and gutters, etc.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>right(&lt;columns&gt;)</code>
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Same as <code>left()</code>.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>gutter(&lt;columns&gt;)</code>
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Returns an appropriate value for a gutter that also spans the number of columns specified. For example, <code>gutter()</code> or <code>gutter(0)</code> is a single gutter,<code>gutter(1)</code> spans one column and two gutters, etc.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="left-1">Classes</h2>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>.grid</code>
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Equivalent to<br>
+                    <code>display: flex; flex-wrap: wrap;</code>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>.grid__cell</code>
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    No associated styles.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>.grid__cell.-span-&lt;columns&gt;</code>
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Equivalent to<br>
+                    <code>width: span(&lt;columns&gt;);</code>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>.grid__cell.-left-&lt;columns&gt;</code>
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Equivalent to<br>
+                    <code>margin-left: left(&lt;columns&gt;);</code>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>.grid__cell.-right-&lt;columns&gt;</code>
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Equivalent to<br>
+                    <code>margin-right: right(&lt;columns&gt;);</code>
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -left-1 -span-4">
+                <code>.grid__cell.-gutter-&lt;columns&gt;</code>
+            </div>
+
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Equivalent to<br>
+                    <code>margin-left: gutter(&lt;columns&gt;);</code>
+                </p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

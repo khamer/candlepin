@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use './functions' as *;
+
+$settings: () !default;
+$columns: map.get($settings, 'columns');
+$gutter: map.get($settings, 'gutter');
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__cell {
+
+        @for $i from 1 through $columns {
+            &.-span-#{$i} {
+                width: span($i);
+            }
+        }
+
+        @for $i from 1 through $columns {
+            &.-left-#{$i} {
+                margin-left: left($i);
+            }
+        }
+
+        @for $i from 1 through $columns {
+            &.-right-#{$i} {
+                margin-right: right($i);
+            }
+        }
+
+        &.-gutter {
+            margin-left: gutter(0);
+        }
+
+        @for $i from 1 through $columns {
+            &.-gutter-#{$i} {
+                margin-left: gutter($i);
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+html {
+    background-color: #fff;
+    color: #664e42;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 1.618;
+}
+html, body {
+    margin: 0;
+}
+.ribbon {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 30px;
+}
+p {
+    margin: 0 0 3rem;
+}
+pre, code {
+    background-color: #2b211c;
+    box-shadow: 0 0 0 0.2em #2b211c;
+    color: #ff443a;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 18px;
+    font-variant-ligatures: none;
+    font-weight: normal;
+    margin: 0 .2em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6, button, .pin {
+    font-family: 'Molle', cursive;
+    margin-top: 0;
+    text-shadow: -2px -2px 0 #ff443a;
+}
+
+.-examples {
+    margin-bottom: 3rem;
+}
+.-examples > div {
+    background-color: #7C5431;
+    min-height: 3em;
+    margin-bottom: 1em;
+}
+
+.pin {
+    background: #fff radial-gradient(white, white 30%, red 30%, red 50%, white 50%) 50% -4em/12em 10em no-repeat;
+    border-radius: 15%/30%;
+    box-shadow: 5em 0 1em -5em rgba(0,0,0,.5) inset, -5em 0 1em -5em rgba(0,0,0,.5) inset;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    padding: 3.178em 0;
+    text-align: center;
+    width: 1.5em;
+}
+
+::selection {
+    background-color: #664e42;
+    color: #fff;
+}
+
+body:hover .alley {
+    background: linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 0/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 9.09%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 18.18%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 27.27%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 36.36%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 45.45%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 54.54%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 63.63%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 72.72%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 81.81%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 90.9%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 100%/calc(8.3333333333% + -27.5px) auto repeat-y;
+    bottom: 0;
+    left: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    pointer-events: none;
+    position: fixed;
+    right: 30px;
+    top: 0;
+    z-index: -1;
+}

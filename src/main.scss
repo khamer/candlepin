@@ -1,0 +1,10 @@
+$columns: 12 !default;
+$gutter: 30px !default;
+
+$settings: (
+    columns: $columns,
+    gutter: $gutter,
+) !default;
+
+@forward 'functions' with ($settings: $settings);
+@forward 'classes' with ($settings: $settings);

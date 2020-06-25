@@ -2,7 +2,7 @@
   "name": "candlepin",
   "version": "1.0.0",
   "description": "lightweight sass grid",
-  "main": "index.js",
+  "main": "src/main.scss",
   "scripts": {
     "build": "sass src:lib",
     "docs": "sass src:docs"

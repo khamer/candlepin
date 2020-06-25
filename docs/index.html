@@ -33,7 +33,63 @@
             <div class="grid__cell -gutter -span-3"></div>
         </div>
 
-        <h2 class="left-1">Settings</h2>
+        <h2>Setup</h2>
+
+        <div class="grid">
+            <div class="grid__cell -span-6">
+                <code>npm install candlepin</code><br>
+                <code>@import "/node_modules/candlepin/src/main";</code><br>
+            </div>
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Install the library via npm. @importing (or @using) will get you functions and classes.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -span-6">
+                <code>@import "~candlepin/src/main";</code>
+            </div>
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    If you're using webpack, instead of typing 'node_modules/' you can just use a tilde.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -span-6">
+                <code>@use "~candlepin/src/main" as *;</code>
+            </div>
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Candlepin also works with the new sass <code>@use</code> syntax too.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -span-6">
+                <pre>
+<!--             -->@use "~candlepin/src/functions" as * with (
+<!--             -->    $settings: (
+<!--             -->        columns: 8,
+<!--             -->        gutter: 1.5rem
+<!--             -->    )
+<!--             -->);<!--
+             --></pre>
+            </div>
+            <div class="grid__cell -gutter -span-6">
+                <p>
+                    Here's a more advanced way to use it - using only the functions while passing in custom settings.
+                </p>
+                <p>
+                    Specifying settings like this just sets defaults that will be used for all the sass functions.
+                </p>
+            </div>
+        </div>
+        <h2>Settings</h2>
 
         <div class="grid">
             <div class="grid__cell -left-1 -span-4">
@@ -59,11 +115,11 @@
             </div>
         </div>
 
-        <h2 class="left-1">Functions</h2>
+        <h2>Functions</h2>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
-                <code>span(&lt;columns&gt;)</code>
+            <div class="grid__cell -span-6">
+                <code>span(&lt;columns&gt; [, &lt;total columns&gt;, &lt;gutter&gt;])</code>
             </div>
 
             <div class="grid__cell -gutter -span-6">
@@ -74,8 +130,8 @@
         </div>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
-                <code>left(&lt;columns&gt;)</code>
+            <div class="grid__cell -span-6">
+                <code>left(&lt;columns&gt; [, &lt;total columns&gt;, &lt;gutter&gt;])</code>
             </div>
 
             <div class="grid__cell -gutter -span-6">
@@ -86,8 +142,8 @@
         </div>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
-                <code>right(&lt;columns&gt;)</code>
+            <div class="grid__cell -span-6">
+                <code>right(&lt;columns&gt; [, &lt;total columns&gt;, &lt;gutter&gt;])</code>
             </div>
 
             <div class="grid__cell -gutter -span-6">
@@ -98,8 +154,8 @@
         </div>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
-                <code>gutter(&lt;columns&gt;)</code>
+            <div class="grid__cell -span-6">
+                <code>gutter(&lt;columns&gt; [, &lt;total columns&gt;, &lt;gutter&gt;])</code>
             </div>
 
             <div class="grid__cell -gutter -span-6">
@@ -109,7 +165,7 @@
             </div>
         </div>
 
-        <h2 class="left-1">Classes</h2>
+        <h2>Classes</h2>
 
         <div class="grid">
             <div class="grid__cell -left-1 -span-4">

@@ -25,6 +25,7 @@ pre, code {
     background-color: #2b211c;
     box-shadow: 0 0 0 0.2em #2b211c;
     color: #ff443a;
+    display: inline-block;
     font-family: 'Overpass Mono', monospace;
     font-size: 18px;
     font-variant-ligatures: none;

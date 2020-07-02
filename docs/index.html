@@ -63,7 +63,7 @@
                 <pre>
 <!--             -->$columns: 8;
 <!--             -->$gutter: 8;
-<!--             -->@import "~candlepin/src/functions";
+<!--             -->@import "~candlepin/src/functions";<!--
              --></pre>
             </div>
             <div class="grid__cell -gutter -span-6">
@@ -71,37 +71,70 @@
                     Here's a more advanced way to use it - using only the functions while passing in custom settings.
                 </p>
                 <p>
-                    Specifying settings like this just sets defaults that will be used for all the sass functions.
+                    Specifying settings like this just sets defaults that will be used for all the sass functions, but you can always override these whenever you use any of the functions.
                 </p>
             </div>
         </div>
+
+        <h2>Examples</h2>
+
+        <h3>Three Columns</h3>
+        <p class="codepen" data-height="344" data-theme-id="light" data-default-tab="result" data-user="khamer" data-slug-hash="MWKOMML" style="height: 344px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="MWKOMML">
+          <span>See the Pen <a href="https://codepen.io/khamer/pen/MWKOMML">
+          MWKOMML</a> by Kevin Hamer (<a href="https://codepen.io/khamer">@khamer</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+        <h3>Uneven Columns</h3>
+        <p class="codepen" data-height="157" data-theme-id="light" data-default-tab="result" data-user="khamer" data-slug-hash="ExPbqLg" style="height: 157px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ExPbqLg">
+          <span>See the Pen <a href="https://codepen.io/khamer/pen/ExPbqLg">
+          ExPbqLg</a> by Kevin Hamer (<a href="https://codepen.io/khamer">@khamer</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+        <h3>Skipping Columns</h3>
+        <p class="codepen" data-height="254" data-theme-id="light" data-default-tab="result" data-user="khamer" data-slug-hash="NWxwQmZ" style="height: 254px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NWxwQmZ">
+          <span>See the Pen <a href="https://codepen.io/khamer/pen/NWxwQmZ">
+          NWxwQmZ</a> by Kevin Hamer (<a href="https://codepen.io/khamer">@khamer</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
         <h2>Settings</h2>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
-                <code>$columns</code> (default: 12)
+            <div class="grid__cell -left-3 -span-2">
+                <code>$columns</code>
             </div>
 
-            <div class="grid__cell -gutter -span-6">
+            <div class="grid__cell -gutter-1 -span-6">
                 <p>
-                    Number of columns.
+                    Number of columns. Defaults to 12.
                 </p>
             </div>
         </div>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
-                <code>$gutter</code> (default: 30px)
+            <div class="grid__cell -left-3 -span-2">
+                <code>$gutter</code>
             </div>
 
-            <div class="grid__cell -gutter -span-6">
+            <div class="grid__cell -gutter-1 -span-6">
                 <p>
-                    Width of gutters.
+                    Width of gutters. Defaults to 30px.
                 </p>
             </div>
         </div>
 
         <h2>Functions</h2>
+
+        <div class="grid">
+            <p class="grid__cell -left-3 -span-6">
+                This the recommended way to use this library – using these functions within your own components.
+            </p>
+        </div>
 
         <div class="grid">
             <div class="grid__cell -span-6">
@@ -154,7 +187,13 @@
         <h2>Classes</h2>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
+            <p class="grid__cell -left-3 -span-6">
+                For those of you who just want to use classes, here's some classes. They follow ABEM standards.
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="grid__cell -span-6">
                 <code>.grid</code>
             </div>
 
@@ -167,7 +206,7 @@
         </div>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
+            <div class="grid__cell -span-6">
                 <code>.grid__cell</code>
             </div>
 
@@ -179,7 +218,7 @@
         </div>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
+            <div class="grid__cell -span-6">
                 <code>.grid__cell.-span-&lt;columns&gt;</code>
             </div>
 
@@ -192,7 +231,7 @@
         </div>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
+            <div class="grid__cell -span-6">
                 <code>.grid__cell.-left-&lt;columns&gt;</code>
             </div>
 
@@ -205,7 +244,7 @@
         </div>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
+            <div class="grid__cell -span-6">
                 <code>.grid__cell.-right-&lt;columns&gt;</code>
             </div>
 
@@ -218,7 +257,7 @@
         </div>
 
         <div class="grid">
-            <div class="grid__cell -left-1 -span-4">
+            <div class="grid__cell -span-6">
                 <code>.grid__cell.-gutter-&lt;columns&gt;</code>
             </div>
 

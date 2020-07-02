@@ -1,3 +1,4 @@
+* { box-sizing: border-box; }
 html {
     background-color: #fff;
     color: #664e42;
@@ -22,15 +23,18 @@ p {
     margin: 0 0 3rem;
 }
 pre, code {
-    background-color: #2b211c;
-    box-shadow: 0 0 0 0.2em #2b211c;
-    color: #ff443a;
+    background-color: #fff;
+    color: #d72d27;
     display: inline-block;
     font-family: 'Overpass Mono', monospace;
     font-size: 18px;
     font-variant-ligatures: none;
     font-weight: normal;
     margin: 0 .2em;
+}
+
+.cp_embed_wrapper {
+    margin: 0 calc(50% - 50vw + 30px) 5rem;
 }
 
 h1 {
@@ -46,14 +50,15 @@ h3 {
 h1, h2, h3, h4, h5, h6, button, .pin {
     font-family: 'Molle', cursive;
     margin-top: 0;
-    text-shadow: -2px -2px 0 #ff443a;
+    text-shadow: 1px 1px 0 #fdb23e, 2px 2px 0 #fdb23e, 3px 3px 0 #fdb23e, 4px 4px 0 #fdb23e;
+    color: #d72d27;
 }
 
 .-examples {
     margin-bottom: 3rem;
 }
 .-examples > div {
-    background-color: #7C5431;
+    background-color: rgba(0, 255, 255, .25);
     min-height: 3em;
     margin-bottom: 1em;
 }
@@ -75,12 +80,12 @@ h1, h2, h3, h4, h5, h6, button, .pin {
     color: #fff;
 }
 
-body:hover .alley {
+.alley {
     background: linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 0/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 9.09%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 18.18%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 27.27%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 36.36%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 45.45%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 54.54%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 63.63%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 72.72%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 81.81%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #f3d3aa44, #dbcebd44) 90.9%/calc(8.3333333333% + -27.5px) auto repeat-y, linear-gradient(to bottom, #dbcebd44, #f3d3aa44) 100%/calc(8.3333333333% + -27.5px) auto repeat-y;
     bottom: 0;
     left: 30px;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1140px;
     pointer-events: none;
     position: fixed;
     right: 30px;

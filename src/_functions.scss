@@ -1,8 +1,5 @@
-@use 'sass:map';
-
-$settings: () !default;
-$columns: map.get($settings, 'columns');
-$gutter: map.get($settings, 'gutter');
+$columns: 12 !default;
+$gutter: 30px !default;
 
 ///
 /// You probably don't want to use this. See span().

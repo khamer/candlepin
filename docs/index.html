@@ -49,7 +49,7 @@
 
         <div class="grid">
             <div class="grid__cell -span-6">
-                <code>@import "~candlepin/src/main";</code>
+                <code>@import "~candlepin";</code>
             </div>
             <div class="grid__cell -gutter -span-6">
                 <p>
@@ -60,24 +60,10 @@
 
         <div class="grid">
             <div class="grid__cell -span-6">
-                <code>@use "~candlepin/src/main" as *;</code>
-            </div>
-            <div class="grid__cell -gutter -span-6">
-                <p>
-                    Candlepin also works with the new sass <code>@use</code> syntax too.
-                </p>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="grid__cell -span-6">
                 <pre>
-<!--             -->@use "~candlepin/src/functions" as * with (
-<!--             -->    $settings: (
-<!--             -->        columns: 8,
-<!--             -->        gutter: 1.5rem
-<!--             -->    )
-<!--             -->);<!--
+<!--             -->$columns: 8;
+<!--             -->$gutter: 8;
+<!--             -->@import "~candlepin/src/functions";
              --></pre>
             </div>
             <div class="grid__cell -gutter -span-6">

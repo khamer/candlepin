@@ -1,9 +1,4 @@
-@use 'sass:map';
-@use './functions' as *;
-
-$settings: () !default;
-$columns: map.get($settings, 'columns');
-$gutter: map.get($settings, 'gutter');
+@import 'functions';
 
 .grid {
     display: flex;

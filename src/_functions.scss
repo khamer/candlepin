@@ -35,3 +35,19 @@ $gutter: 30px !default;
 @function gutter($n: 0, $columns: $columns, $gutter: $gutter) {
     @return calc(#{grid-unit($n, $columns, $gutter, 2)});
 }
+
+///
+/// Mixin for wrapping items within a flex container.
+///
+@mixin wrap($n: 0, $columns: $columns, $gutter: $gutter) {
+    width: span($n, $columns, $gutter);
+    margin-bottom: gutter(0, $columns, $gutter);
+
+    &:nth-child(n) {
+        margin-right: gutter(0, $columns, $gutter);
+    }
+
+    &:nth-child(#{$columns/$n}n) {
+        margin-right: 0;
+    }
+}

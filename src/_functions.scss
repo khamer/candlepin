@@ -51,3 +51,29 @@ $gutter: 30px !default;
         margin-right: 0;
     }
 }
+
+///
+@mixin grid-utilities($columns: $columns, $gutter: $gutter) {
+    &.-gutter {
+        margin-left: gutter(0, $columns, $gutter);
+    }
+
+    @for $i from 1 through $columns {
+        &.-span-#{$i} {
+            flex: 0 0 auto;
+            width: span($i, $columns, $gutter);
+        }
+
+        &.-left-#{$i} {
+            margin-left: left($i, $columns, $gutter);
+        }
+
+        &.-right-#{$i} {
+            margin-right: right($i, $columns, $gutter);
+        }
+
+        &.-gutter-#{$i} {
+            margin-left: gutter($i, $columns, $gutter);
+        }
+    }
+}

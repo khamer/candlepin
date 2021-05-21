@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $columns: 12 !default;
 $gutter: 30px !default;
 
@@ -8,7 +10,7 @@ $gutter: 30px !default;
 /// corresponds to the width of $n columns and the enclosed gutters.
 ///
 @function grid-unit($n, $columns: $columns, $gutter: $gutter, $extra-gutters: 0) {
-  @return unquote("#{$n/$columns*100%} + #{$gutter * ($n / $columns + $extra-gutters - 1)}");
+  @return unquote("#{math.div($n, $columns)*100%} + #{$gutter * ($n / $columns + $extra-gutters - 1)}");
 }
 
 ///
@@ -47,7 +49,7 @@ $gutter: 30px !default;
         margin-right: gutter(0, $columns, $gutter);
     }
 
-    &:nth-child(#{$columns/$n}n) {
+    &:nth-child(#{math.div($columns, $n)}n) {
         margin-right: 0;
     }
 }

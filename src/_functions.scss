@@ -10,7 +10,7 @@ $gutter: 30px !default;
 /// corresponds to the width of $n columns and the enclosed gutters.
 ///
 @function grid-unit($n, $columns: $columns, $gutter: $gutter, $extra-gutters: 0) {
-  @return unquote("#{math.div($n, $columns)*100%} + #{$gutter * math.div($n, $columns) + $extra-gutters - 1}");
+  @return unquote("#{math.div($n, $columns)*100%} + #{$gutter * (math.div($n, $columns) + $extra-gutters - 1)}");
 }
 
 ///
